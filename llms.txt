@@ -1,0 +1,25 @@
+# Flip Courses
+
+> Learn to Flip Cards for Profit
+
+Flip Courses is a video course platform teaching people how to flip Pokemon and Sports cards for profit. The platform offers free beginner courses and premium tiers with advanced strategies, community access, and 1-on-1 coaching.
+
+## Courses
+
+- Pokemon TCG Flipping
+- Sports Card Flipping
+- Card Grading (PSA, BGS, CGC)
+- Sourcing Undervalued Cards
+- Pricing Strategy & Fee Calculation
+- Market Trend Analysis
+
+## Pricing
+
+- Free: 5 beginner courses, no credit card required
+- Pro ($19/mo): All courses, market analysis tools, community access
+- Master ($49/mo): Everything in Pro plus 1-on-1 coaching and personalized flip reviews
+
+## Links
+
+- Website: https://flip.courses
+- Related: https://flip.ink (Profit Tracker), https://flip.garden, https://sell.party, https://sell.singles
