@@ -59,7 +59,7 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 /* Course Preview */
 .course-preview{max-width:500px;margin:0 auto 40px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .cp-header{background:var(--surface);padding:16px 20px;font-weight:700;font-size:.9rem;display:flex;justify-content:space-between;border-bottom:1px solid var(--border)}
-.cp-row{display:grid;grid-template-columns:2.5fr 1fr 1fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center}
+.cp-row{display:grid;grid-template-columns:2.5fr 1fr 1fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center;cursor:pointer}
 .cp-row:last-child{border:none}
 .cp-course{font-weight:600}
 .cp-level{color:var(--muted);font-size:.8rem}
@@ -80,19 +80,19 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 .section-title{font-size:clamp(1.5rem,3vw,2.5rem);font-weight:800;text-align:center;margin-bottom:12px}
 .section-sub{text-align:center;color:var(--muted);max-width:550px;margin:0 auto 48px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
-.step{text-align:center;padding:32px}
+.step{text-align:center;padding:32px;cursor:pointer}
 .step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .step h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
 .step p{color:var(--muted);font-size:.9rem}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.feat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s;cursor:pointer}
 .feat:hover{border-color:var(--primary);transform:translateY(-2px)}
 .feat-icon{font-size:2rem;margin-bottom:16px}
 .feat h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
 .feat p{color:var(--muted);font-size:.9rem}
 /* Pricing */
 .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:900px;margin:0 auto}
-.price-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;text-align:center;transition:all .3s;position:relative}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;text-align:center;transition:all .3s;position:relative;cursor:pointer}
 .price-card.pop{border-color:var(--primary);box-shadow:0 0 40px rgba(249,115,22,.12)}
 .price-card.pop::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:4px 16px;border-radius:99px;font-size:.75rem;font-weight:700}
 .price-tier{font-size:1rem;font-weight:600;color:var(--muted);margin-bottom:8px}
@@ -172,10 +172,10 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <p class="hero-sub">Free and premium video courses on flipping Pokemon &amp; Sports cards for profit. Learn sourcing, grading, pricing, and market analysis.</p>
 <div class="course-preview">
   <div class="cp-header"><span>Popular Courses</span><span style="color:var(--primary)">Course Library</span></div>
-  <div class="cp-row"><span class="cp-course">Pokemon TCG Flipping 101</span><span class="cp-level">Beginner</span><span class="cp-tag free">FREE</span></div>
-  <div class="cp-row"><span class="cp-course">Sports Card Sourcing</span><span class="cp-level">Beginner</span><span class="cp-tag free">FREE</span></div>
-  <div class="cp-row"><span class="cp-course">Grading for Profit</span><span class="cp-level">Intermediate</span><span class="cp-tag pro">PRO</span></div>
-  <div class="cp-row"><span class="cp-course">Market Trend Mastery</span><span class="cp-level">Advanced</span><span class="cp-tag pro">PRO</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-course">Pokemon TCG Flipping 101</span><span class="cp-level">Beginner</span><span class="cp-tag free">FREE</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-course">Sports Card Sourcing</span><span class="cp-level">Beginner</span><span class="cp-tag free">FREE</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-course">Grading for Profit</span><span class="cp-level">Intermediate</span><span class="cp-tag pro">PRO</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-course">Market Trend Mastery</span><span class="cp-level">Advanced</span><span class="cp-tag pro">PRO</span></div>
   <div class="cp-footer"><span>Categories: Pokemon TCG, Sports Cards, Grading, Sourcing, Pricing, Market Trends</span></div>
 </div>
 <button class="hero-cta" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Start Learning Free</button>
@@ -190,9 +190,9 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <h2 class="section-title">How It Works</h2>
 <p class="section-sub">Three steps from beginner to profitable card flipper</p>
 <div class="steps">
-  <div class="step"><div class="step-num">1</div><h3>Watch Free Lessons</h3><p>Start with our free beginner courses covering Pokemon TCG and Sports card flipping fundamentals.</p></div>
-  <div class="step"><div class="step-num">2</div><h3>Practice with Real Cards</h3><p>Apply what you learn with hands-on sourcing, grading, and listing exercises using real inventory.</p></div>
-  <div class="step"><div class="step-num">3</div><h3>Track Your Profits</h3><p>Use our strategies to flip cards profitably. Track your ROI and scale your flipping business.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">1</div><h3>Watch Free Lessons</h3><p>Start with our free beginner courses covering Pokemon TCG and Sports card flipping fundamentals.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">2</div><h3>Practice with Real Cards</h3><p>Apply what you learn with hands-on sourcing, grading, and listing exercises using real inventory.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">3</div><h3>Track Your Profits</h3><p>Use our strategies to flip cards profitably. Track your ROI and scale your flipping business.</p></div>
 </div>
 </div></section>
 
@@ -200,12 +200,12 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <h2 class="section-title">What You Get</h2>
 <p class="section-sub">Everything you need to flip cards like a pro</p>
 <div class="features">
-  <div class="feat"><div class="feat-icon">🎬</div><h3>Video Library</h3><p>Step-by-step video courses covering Pokemon TCG, Sports Cards, and more. New content added weekly.</p></div>
-  <div class="feat"><div class="feat-icon">📊</div><h3>Market Analysis</h3><p>Learn to read market trends, spot undervalued cards, and time your buys and sells for maximum profit.</p></div>
-  <div class="feat"><div class="feat-icon">🔍</div><h3>Sourcing Guide</h3><p>Find cards below market value at garage sales, card shows, online auctions, and retail stores.</p></div>
-  <div class="feat"><div class="feat-icon">🏆</div><h3>Grading 101</h3><p>Understand PSA, BGS, and CGC grading. Learn which cards to grade and how grading multiplies value.</p></div>
-  <div class="feat"><div class="feat-icon">💰</div><h3>Pricing Strategy</h3><p>Master comp analysis, fee calculations, and pricing tactics to maximize profit on every flip.</p></div>
-  <div class="feat"><div class="feat-icon">👥</div><h3>Community Access</h3><p>Join a community of active flippers. Share finds, get advice, and learn from experienced sellers.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🎬</div><h3>Video Library</h3><p>Step-by-step video courses covering Pokemon TCG, Sports Cards, and more. New content added weekly.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">📊</div><h3>Market Analysis</h3><p>Learn to read market trends, spot undervalued cards, and time your buys and sells for maximum profit.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🔍</div><h3>Sourcing Guide</h3><p>Find cards below market value at garage sales, card shows, online auctions, and retail stores.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🏆</div><h3>Grading 101</h3><p>Understand PSA, BGS, and CGC grading. Learn which cards to grade and how grading multiplies value.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">💰</div><h3>Pricing Strategy</h3><p>Master comp analysis, fee calculations, and pricing tactics to maximize profit on every flip.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">👥</div><h3>Community Access</h3><p>Join a community of active flippers. Share finds, get advice, and learn from experienced sellers.</p></div>
 </div>
 </div></section>
 
@@ -213,7 +213,7 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <h2 class="section-title">Pricing</h2>
 <p class="section-sub">Start free. Level up when you're ready.</p>
 <div class="pricing">
-  <div class="price-card">
+  <div class="price-card" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
     <div class="price-tier">Free</div>
     <div class="price-amount">$0</div>
     <ul class="price-list">
@@ -225,7 +225,7 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
     </ul>
     <button class="price-btn price-btn-out" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Start Free</button>
   </div>
-  <div class="price-card pop">
+  <div class="price-card pop" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
     <div class="price-tier">Pro</div>
     <div class="price-amount">$19<span>/mo</span></div>
     <ul class="price-list">
@@ -238,7 +238,7 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
     </ul>
     <button class="price-btn price-btn-fill" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join Waitlist</button>
   </div>
-  <div class="price-card">
+  <div class="price-card" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
     <div class="price-tier">Master</div>
     <div class="price-amount">$49<span>/mo</span></div>
     <ul class="price-list">
@@ -369,6 +369,10 @@ function copyAddr(el){navigator.clipboard.writeText(el.textContent);const o=el.t
 stRef.child('totalVisitors').once('value',s=>stRef.update({totalVisitors:(s.val()||0)+1}));
 checkExisting();trackEvent('page_view');
 const r=getRef();if(r)localStorage.setItem('flipcourses_ref',r);
+</script>
+<!-- Watermark Protection -->
+<script>
+(function(){var b='sell.party',t='Sell Party';function w(){var c=document.createElement('canvas');c.width=300;c.height=150;var x=c.getContext('2d');x.save();x.translate(150,75);x.rotate(-.44);x.font='600 18px Arial';x.fillStyle='rgba(255,255,255,0.04)';x.textAlign='center';x.fillText(t,0,-10);x.font='400 12px Arial';x.fillStyle='rgba(255,255,255,0.03)';x.fillText(b,0,10);x.restore();var d=document.createElement('div');d.id='_spw';d.setAttribute('data-sp','1');Object.assign(d.style,{position:'fixed',top:'0',left:'0',width:'100vw',height:'100vh',pointerEvents:'none',zIndex:'2147483647',backgroundImage:'url('+c.toDataURL()+')',backgroundRepeat:'repeat',opacity:'1',userSelect:'none'});document.body.appendChild(d);new MutationObserver(function(){if(!document.getElementById('_spw'))w()}).observe(document.body,{childList:true,subtree:true})}setInterval(function(){var e=document.getElementById('_spw');if(!e)w();else{e.style.display='';e.style.visibility='';e.style.opacity='1'}},2000);document.addEventListener('DOMContentLoaded',function(){w()})})();
 </script>
 </body>
 </html>
